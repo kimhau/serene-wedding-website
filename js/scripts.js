@@ -313,13 +313,15 @@ $(document).ready(function () {
 
 // Google map - now using embedded iframe, no need for initialization
 function initMap() {
-  // Map is now embedded via iframe, no JavaScript initialization needed
-  console.log('Map loaded via iframe embed');
+  // Map is now embedded via iframe pointing to 三春欣洋迎宾楼 SY Welcome Restaurant Xin Yang
+  // Coordinates: 1.8605068186154916,102.97120392397075 with zoom level 20
+  console.log('Map loaded via iframe embed - SY Welcome Restaurant Xin Yang');
 }
 
 function initBBSRMap() {
-  // Map is now embedded via iframe, no JavaScript initialization needed  
-  console.log('Map loaded via iframe embed');
+  // Map is now embedded via iframe pointing to 三春欣洋迎宾楼 SY Welcome Restaurant Xin Yang
+  // Coordinates: 1.8605068186154916,102.97120392397075 with zoom level 20
+  console.log('Map loaded via iframe embed - SY Welcome Restaurant Xin Yang');
 }
 
 // alert_markup

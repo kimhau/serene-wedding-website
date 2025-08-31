@@ -418,15 +418,44 @@
     </div>
     
     <div id="map-canvas">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7234842077595!2d102.96898141533298!3d1.8598260981773324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdbeaba34bb1ad%3A0x4bbb04bc7c862a3c!2sCheng%20Tian%20Keong%20Temple!5e0!3m2!1sen!2smy!4v1693494824000!5m2!1sen!2smy" 
-                width="100%" 
-                height="500" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Wedding Venue - Cheng Tian Keong Temple, Batu Pahat">
-        </iframe>
+        <!-- Fallback: Static map with pin if embed API has issues -->
+        <div style="position: relative; width: 100%; height: 500px; background-color: #f0f0f0;">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsmx2iUH71H1DNiM6pqNKUVtmjZPfiSmc&q=三春欣洋迎宾楼+SY+Welcome+Restaurant+Xin+Yang+Batu+Pahat&zoom=18&maptype=roadmap" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Wedding Venue - 三春欣洋迎宾楼 SY Welcome Restaurant Xin Yang"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            </iframe>
+            <!-- Alternative static map with visible marker -->
+            <div style="display: none; width: 100%; height: 500px; position: relative;">
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsmx2iUH71H1DNiM6pqNKUVtmjZPfiSmc&q=SY+Welcome+Restaurant+Batu+Pahat&zoom=18&maptype=roadmap" 
+                        width="100%" 
+                        height="500" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Wedding Venue - SY Welcome Restaurant"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                </iframe>
+                <!-- Coordinates fallback with custom marker -->
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=1.8604855536375713,102.97121296890367&zoom=18&size=800x500&markers=color:red%7Clabel:三春欣洋迎宾楼%7C1.8604855536375713,102.97121296890367&key=AIzaSyAsmx2iUH71H1DNiM6pqNKUVtmjZPfiSmc" 
+                     style="width: 100%; height: 100%; object-fit: cover; display: none;" 
+                     alt="Wedding Venue Map - 三春欣洋迎宾楼 SY Welcome Restaurant Xin Yang"
+                     onerror="this.nextElementSibling.style.display='block';">
+                <!-- Final fallback: OpenStreetMap with marker -->
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=102.9700,1.8590,102.9730,1.8620&marker=1.8604855536375713,102.97121296890367" 
+                        width="100%" 
+                        height="500" 
+                        style="border:0; display: none;"
+                        title="Wedding Venue - OpenStreetMap">
+                </iframe>
+            </div>
+        </div>
     </div>
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
