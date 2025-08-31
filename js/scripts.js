@@ -311,34 +311,15 @@ $(document).ready(function () {
 
 /********************** Extras **********************/
 
-// Google map
+// Google map - now using embedded iframe, no need for initialization
 function initMap() {
-  //3.4787778974680794, 102.33014801245294 、、1.859826,102.9711798
-  var location = { lat: 1.859826, lng: 102.9711798 };
-  var map = new google.maps.Map(document.getElementById("map-canvas"), {
-    zoom: 15,
-    center: location,
-    scrollwheel: false,
-  });
-
-  var marker = new google.maps.Marker({
-    position: location,
-    map: map,
-  });
+  // Map is now embedded via iframe, no JavaScript initialization needed
+  console.log('Map loaded via iframe embed');
 }
 
 function initBBSRMap() {
-  var la_fiesta = { lat: 1.859826, lng: 102.9711798 };
-  var map = new google.maps.Map(document.getElementById("map-canvas"), {
-    zoom: 15,
-    center: la_fiesta,
-    scrollwheel: false,
-  });
-
-  var marker = new google.maps.Marker({
-    position: la_fiesta,
-    map: map,
-  });
+  // Map is now embedded via iframe, no JavaScript initialization needed  
+  console.log('Map loaded via iframe embed');
 }
 
 // alert_markup
